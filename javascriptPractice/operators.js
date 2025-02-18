@@ -1,0 +1,13 @@
+let num1=100;
+let num2=200;
+let addition=num1+num2;
+let subtration=num2-num1;
+let multiplication=num1*num2;
+let division=num2/num1;
+console.log("Addition: ",addition);
+console.log("Subtraction: ",subtration);
+console.log("Multiplication: ",multiplication);
+console.log("Division: ",division);
+console.log("is num 1 greater than num2? ",num1>num2);
+console.log(" are num1 and num2 even? ",(num1%2===0)&&(num2%2===0));
+console.log("Is num1 a multiple of num2? ",num2%num1===0);
