@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+    <!-- React and ReactDOM CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Welcome({name,message="No message available",age}){
+        return(<div>
+         <h2>Welcome to React,{name}!</h2>
+          <p>This is the first function which I do by myself</p>
+          <p>{message}</p>
+          <p>well well well...you wanna know my age?...its {age}</p>
+          </div>);
+      }
+      ReactDOM.render(<Welcome name="Cathy" message="You are doing great girlllll!!!" age={22}/>,document.getElementById('root'));
+
+    </script>
+  </body>
+</html>
