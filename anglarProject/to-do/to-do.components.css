@@ -1,0 +1,7 @@
+.todo-container{
+    background:#f4f4f4;
+}
+.completed{
+    color:gray;
+    font-style: italic;
+}
