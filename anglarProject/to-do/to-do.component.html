@@ -1,0 +1,29 @@
+<div class="todo-container">
+<input type="text" [(ngModel)]="newTask"  placeholder="Enter your task"/>
+<button (click)="addTask()" [disabled]="!newTask.trim()">Add task</button>
+<br>
+<ul *ngIf="tasks.length > 0; else noTasks">
+    <li *ngFor="let task of tasks;index as i">
+        
+
+        <div *ngIf="editingIndex===i; else viewMode">
+            <input type="text" [(ngModel)]="editedTask" />
+            <button (click)="saveEditedTask(i)">Save</button>
+            <button (click)="cancleEdit()">Cancel</button>
+        </div>
+
+
+        <ng-template #viewMode>
+            <span [class.complete]="task.completed">{{task.name}}</span>
+            <button (click)="toggleComplete(i)">{{task.completed ? '✅' : '⏳'}}</button>
+            <button (click)="startEditing(i)">Edit</button>
+
+        </ng-template>
+
+        
+    </li>
+</ul>
+<ng-template #noTasks>
+    <p>No Tasks yet!!!</p>
+</ng-template>
+</div>
