@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage>{
   String _displayText="";
   void _showText() {
     setState(() {
-      _displayText = _controller.text; // Updates text when button is clicked
+      _displayText = _controller.text;
     });
   }
 
@@ -41,9 +41,9 @@ class _MyHomePageState extends State<MyHomePage>{
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 20), // Adds space between widgets
+            SizedBox(height: 20), 
             ElevatedButton(
-              onPressed: _showText, // Calls _showText when clicked
+              onPressed: _showText, 
               child: Text("Submit"),
             ),
         SizedBox(height: 20),
